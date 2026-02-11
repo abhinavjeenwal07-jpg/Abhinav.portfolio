@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhinav | Data Science Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }body{
+  background: linear-gradient(135deg,#0f172a,#020617);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  position:sticky;
+  top:0;
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.05);
+  z-index:999;
+}
+
+nav h2{
+  color:#38bdf8;
+  letter-spacing:1px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  flex-direction:column;
+  perspective:1000px;
+}
+
+.card3d{
+  padding:50px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.05);
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+  transform-style:preserve-3d;
+  transition:transform .6s;
+}
+
+.card3d:hover{
+  transform:rotateY(15deg) rotateX(10deg) scale(1.05);
+}
+
+.hero h1{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+.hero span{
+  color:#38bdf8;
+}
+
+.btn{
+  margin-top:25px;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  background:#38bdf8;
+  color:#020617;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 20px rgba(56,189,248,.4);
+}
+
+section{
+  padding:80px 8%;
+}
+
+.title{
+  text-align:center;
+  font-size:2.2rem;
+  margin-bottom:50px;
+  color:#38bdf8;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.glass{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  transition:.4s;
+  transform-style:preserve-3d;
+}
+
+.glass:hover{
+  transform:translateY(-10px) rotateX(6deg);
+  box-shadow:0 20px 30px rgba(0,0,0,.4);
+}
+
+.glass h3{
+  margin-bottom:10px;
+  color:#7dd3fc;
+}
+
+/* SKILLS */
+.skills span{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:20px;
+  margin:8px;
+  background:#0ea5e9;
+  transition:.3s;
+}
+
+.skills span:hover{
+  transform:scale(1.1);
+  background:#38bdf8;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(255,255,255,0.05);
+  margin-top:40px;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:2.2rem;
+  }
+}
+
+  </style>
+</head>
+<body><nav>
+  <h2>Abhinav</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#project">Project</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav><section class="hero">
+  <div class="card3d">
+    <h1>Hello, I'm <span>Abhinav</span> 👋</h1>
+    <p>B.Tech CSE (Data Science) Student | Future Data Scientist | Tech Enthusiast</p>
+    <button class="btn" onclick="scrollToSection()">Explore More</button>
+  </div>
+</section><section id="about">
+  <h2 class="title">About Me</h2>
+  <div class="glass">
+    <p>
+      I am a passionate Computer Science student specializing in Data Science. 
+      I love learning new technologies, building real-world projects, and improving my skills every day to become job-ready.Beyond technology, I enjoy public speaking and engaging with people at events.
+</p>
+
+  </div>
+</section><section id="project">
+  <h2 class="title">Featured Project</h2>
+  <div class="grid">
+    <div class="glass">
+      <h3>🗳️ IoT-Based Smart Voter Authentication System</h3>
+      <p>
+        Developed a smart voting authentication system using NodeMCU to enhance security and efficiency in elections.
+        This project focuses on real-time verification and preventing unauthorized voting.
+      </p>
+    </div>
+  </div>
+</section><section id="skills">
+  <h2 class="title">Skills & Learning</h2>
+  <div class="skills" style="text-align:center;">
+    <span>Python</span>
+    <span>Data Science</span>
+    <span>IoT</span>
+    <span>AI Tools</span>
+    <span>Problem Solving</span>
+  </div>
+</section><section id="contact" class="contact">
+  <h2 class="title">Let's Connect</h2>
+  <div class="glass">
+    <p>📧 Email: <strong>abhinavjeenwal07@gmail.com</strong></p>
+    <p>Open to collaboration, learning opportunities, and exciting tech projects!</p>
+  </div>
+</section><footer>
+  <p>© 2026 Abhinav | Built with ❤️</p>
+</footer><script>
+function scrollToSection(){
+  document.querySelector('#about').scrollIntoView({
+    behavior:'smooth'
+  });
+}
+</script></body>
+</html>
